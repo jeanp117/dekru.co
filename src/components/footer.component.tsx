@@ -111,6 +111,7 @@ export const Footer = () => {
                   </svg>
                   <a
                     href={`https://wa.me/+57${datos.whatsapp}`}
+                    target="_blank"
                     className="mr-4 hover:underline md:mr-6 "
                   >
                     {datos.whatsapp}

@@ -29,7 +29,7 @@ export default function Home() {
         <Header />
 
         <Hero />
-        <section className="grid grid-cols-2   md:grid-cols-4 gap-4 gap-y-28 md:gap-y-4 relative   mt-32 mb-16 ">
+        <section className="grid grid-cols-2   md:grid-cols-4 gap-4 gap-y-28 md:gap-y-4 relative   mt-32 md:mt-40 mb-16 ">
           <CardServicio
             title="Realidad virtual "
             subtitle="Actividades inmersivas y recorridos virtuales para tu negocio."
@@ -146,7 +146,7 @@ const Hero = () => {
           tu {palabra}
         </h1>
       </div>
-      <h1 className="text-xl    md:text-[34px] flex max-w-screen-sm  md:max-w-3xl font-medium">
+      <h1 className="text-white  text-xl    md:text-[34px] flex max-w-screen-sm  md:max-w-3xl font-medium">
         Sitios web y aplicaciones para tu negocio
       </h1>
       <img

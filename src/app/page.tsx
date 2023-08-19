@@ -1,11 +1,12 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 
-import { LogoAnimado } from "./components/bienvenida.component";
-import { CardServicio } from "./components/servicios.card";
-import { Footer, Whatsapp } from "./components/footer.component";
-import { Grilla } from "./components/grid.component";
-import { ARLottie } from "./components/ar.component";
+import { LogoAnimado } from "../components/bienvenida.component";
+import { CardServicio } from "../components/servicios.card";
+import { Footer, Whatsapp } from "../components/footer.component";
+import { Grilla } from "../components/grid.component";
+import { ARLottie } from "../components/ar.component";
+import { Degradado } from "../components/degradado.component";
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
       "
       >
         <Degradado
-          style={{
+          estilo={{
             top: "70vh",
           }}
         />
@@ -91,7 +92,7 @@ const Hero = () => {
     return () => {
       clearInterval(interval.current);
     };
-  }, []);
+  }, [negocios, negocios.length]);
 
   useEffect(() => {
     let palabra = negocios[index];
@@ -205,23 +206,5 @@ const Header = () => {
         ></div>
       </div>
     </nav>
-  );
-};
-
-export const Degradado: React.FC<{
-  style?: React.CSSProperties;
-}> = ({ style }) => {
-  return (
-    <div
-      className="frame-512"
-      style={{
-        position: "absolute",
-
-        zIndex: -1,
-        height: "677px",
-        left: "0%",
-        ...style,
-      }}
-    ></div>
   );
 };

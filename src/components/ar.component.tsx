@@ -1,12 +1,12 @@
 "use client";
 import { useLottie } from "lottie-react";
-import bienvenida from "../../././../public/bienvenida.json";
+import ar from "../../public/ar.json";
 
-export const LogoAnimado: React.FC<{
+export const ARLottie: React.FC<{
   loop?: boolean;
 }> = ({ loop }) => {
   const options = {
-    animationData: bienvenida,
+    animationData: ar,
     loop: loop || false,
     onComplete: () => {
       //wait  1 second

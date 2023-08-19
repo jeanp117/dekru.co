@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { useIsInViewport } from "../hooks/isInViewport.hook";
+import { useInView } from "react-intersection-observer";
 
 export const TarjetaPortafolio: React.FC<{
   image?: string;
@@ -26,9 +26,10 @@ export const TarjetaPortafolio: React.FC<{
 }) => {
   //function para detectar si el elemento esta en el viewport sin librerias externas a react js
 
-  const ref1 = useRef<any | null>(null);
-  const isInViewport1 = useIsInViewport(ref1);
-
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0,
+  });
   const videoRef = useRef<any | null>(null);
 
   const [isPlaying, setIsPlaying] = useState(false);
@@ -47,7 +48,7 @@ export const TarjetaPortafolio: React.FC<{
   };
   useEffect(() => {
     if (!videoRef.current) return;
-    if (isInViewport1) {
+    if (inView) {
       if (!dirty) {
         setTimeout(() => {
           playVideo();
@@ -63,11 +64,11 @@ export const TarjetaPortafolio: React.FC<{
       videoRef.current.pause();
       setIsPlaying(false);
     };
-  }, [isInViewport1]);
+  }, [inView]);
 
   return (
     <div
-      ref={ref1}
+      ref={ref}
       className={`${className} rounded-2xl overflow-hidden relative cursor-pointer`}
       onClick={onClick}
     >

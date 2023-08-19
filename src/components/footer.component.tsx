@@ -1,7 +1,6 @@
-import { useRef } from "react";
-import { useIsInViewport } from "../hooks/isInViewport.hook";
-import { Degradado } from "../page";
 import { LogoAnimado } from "./bienvenida.component";
+import { Degradado } from "./degradado.component";
+import { useInView } from "react-intersection-observer";
 
 const datos = {
   whatsapp: "3186674418",
@@ -13,10 +12,10 @@ export const Contactanos = () => {
   return (
     <div className="flex  w-full items-center  justify-center">
       <Degradado
-        style={{
-          top: "0vh",
-          overflow: "hidden",
-        }}
+      // estilo={{
+      //   top: "0vh",
+      //   overflow: "hidden",
+      // }}
       />
       <div className=" glass   flex flex-row   vidrio p-6  md:py-16 md:px-20 gap-4 md:gap-8    mt-16 mb-16 rounded-3xl justify-left  relative w-full md:w-3/4 lg:w-5/6 ">
         <div className="flex flex-col gap-4 md:gap-8 text-white xs:max-w-xs">
@@ -41,8 +40,10 @@ export const Contactanos = () => {
 };
 
 export const Whatsapp = () => {
-  const ref = useRef<any | null>(null);
-  const isInViewport1 = useIsInViewport(ref);
+  const { ref, inView } = useInView({
+    threshold: 0,
+  });
+
   return (
     <div
       ref={ref}
@@ -50,7 +51,7 @@ export const Whatsapp = () => {
         window.open(`https://wa.me/+57${datos.whatsapp}`, "_blank");
       }}
     >
-      {isInViewport1 && (
+      {inView && (
         <img
           src="wapp.svg"
           alt="Whatsapp de Dekrú.co"
@@ -64,8 +65,9 @@ export const Whatsapp = () => {
 };
 
 export const Footer = () => {
-  const ref1 = useRef<any>(null);
-  const isInViewport1 = useIsInViewport(ref1);
+  const { ref, inView } = useInView({
+    threshold: 0,
+  });
 
   return (
     <div className="flex flex-col relative w-full justify-center items-center">
@@ -75,8 +77,8 @@ export const Footer = () => {
           <div className=" flex flex-col  items-center gap-y-8  md:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center mb-4 sm:mb-0">
               <a href="https://dekru.co/">
-                <div className="w-52  " ref={ref1}>
-                  {isInViewport1 && <LogoAnimado loop={false} />}
+                <div className="w-52  " ref={ref}>
+                  {inView && <LogoAnimado loop={false} />}
                 </div>
               </a>
             </div>

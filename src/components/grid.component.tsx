@@ -6,7 +6,7 @@ export const Grilla = () => {
       <TarjetaPortafolio
         video="./portafolio/happy"
         badge="Realidad virtual"
-        title="./portafolio/happy.svg"
+        title="./portafolio/Happy.svg"
         className=" col-span-12 md:col-span-8  aspect-[800/500]  "
         onClick={() => {
           window.open(

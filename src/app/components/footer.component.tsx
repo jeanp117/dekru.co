@@ -4,7 +4,7 @@ import { Degradado } from "../page";
 import { LogoAnimado } from "./bienvenida.component";
 
 const datos = {
-  whatsapp: "3186394804",
+  whatsapp: "3186674418",
   email: "hola@dekrú.co",
   instagram: "dekru.co",
 };

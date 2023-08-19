@@ -2,26 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  background: black !important;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
+
+  font-family: "Satoshi", sans-serif;
+}
+
+.stroke {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+.textoDegradado {
+  background: linear-gradient(274deg, #ad7dca 0%, #fbcf9c 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradientBackground {
+  width: 80vw;
+  height: 307px;
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    54deg,
+    #dc0000 0%,
+    rgba(54, 113, 228, 0.5) 42.52%,
+    #e100d8 100%
+  );
+  top: 30vh;
+  filter: blur(20vh);
+}
+
+.main {
+  background: #000000 !important;
+  width: 100vw;
+  height: 5465px;
+  position: relative;
+  overflow: hidden;
+}
+
+.vidrio {
+  backdrop-filter: blur(5.5px);
+  background: rgba(88, 88, 88, 0.242);
+}
+
+.divGradient {
+  background: red;
+  height: 100%;
+  overflow: hidden;
+}
+
+.frame-512 {
+  background: linear-gradient(
+    101.78deg,
+    rgba(54, 113, 228, 0.5) 0%,
+    rgba(191, 0, 225, 0.519) 100%
+  );
+  width: 100%;
+  position: absolute;
+
+  overflow: hidden;
+  filter: blur(200px);
 }

@@ -32,7 +32,11 @@ export const Contactanos = () => {
         </div>
 
         <div className="absolute -right-4 md:right-6 -bottom-1 ">
-          <img src="fulano.png" className=" w-32 md:w-56" />
+          <img
+            src="fulano.png"
+            className=" w-32 md:w-56"
+            alt="¿Listo para llevar tu negocio al siguiente nivel? | Dekrú.co"
+          />
         </div>
       </div>
     </div>
@@ -76,11 +80,9 @@ export const Footer = () => {
         <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
           <div className=" flex flex-col  items-center gap-y-8  md:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center mb-4 sm:mb-0">
-              <a href="https://dekru.co/">
-                <div className="w-52  " ref={ref}>
-                  {inView && <LogoAnimado loop={false} />}
-                </div>
-              </a>
+              <div className="w-52  " ref={ref}>
+                {inView && <LogoAnimado loop={false} />}
+              </div>
             </div>
             <div className="flex">
               <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">

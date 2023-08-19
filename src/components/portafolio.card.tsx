@@ -81,6 +81,7 @@ export const TarjetaPortafolio: React.FC<{
         <img
           src={title}
           className="z-20  pointer-events-none    w-3/6  md:w-4/6  "
+          alt="Portafolio de Dekrú.co"
         />
       </div>
 

@@ -150,9 +150,9 @@ const Hero = () => {
         Sitios web y aplicaciones para tu negocio
       </h1>
       <img
-        src="pc.svg
-      "
+        src="pc.png"
         className="pointer-events-none  mt-4    scale-150  md:scale-100 md:h-auto "
+        alt="Sitios web y aplicaciones para tu negocio | Dekrú.co"
       />
     </div>
   );

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "onepiece",
+    "img": "/ar/onepiece.jpg",
+    "link": "https://www.instagram.com/ar/2548351775333104/"
+  },
+  {
+    "id": 2,
+    "name": "nezuko",
+    "img": "/ar/nezuko.jpg",
+    "link": "https://www.instagram.com/ar/621575446723433/"
+  },
+  {
+    "id": 3,
+    "name": "nezuko",
+    "img": "/ar/berserk.jpg",
+    "link": "https://www.instagram.com/ar/606496225028141/"
+  },
+  {
+    "id": 3,
+    "name": "evangelion",
+    "img": "/ar/evangelion.jpg",
+    "link": "https://www.instagram.com/ar/843293960825176/?ch=MzdjMjhhOTZhZDk4OTllNDAyZmVjZWFmOWZhNGYwMmI%3D"
+  },
+  {
+    "id": 4,
+    "name": "chainsaw",
+    "img": "/ar/chainsaw.jpg",
+    "link": "https://www.instagram.com/ar/802114135039635/"
+  },
+  {
+    "id": 5,
+    "name": "sailor moon",
+    "img": "/ar/sailor.jpg",
+    "link": ""
+  }
+]
